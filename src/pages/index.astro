@@ -12,22 +12,22 @@ import Hero from "@/components/Hero.astro"
 ---
 
 <Layout
-  title="Porfolio de midudev - Desarrollador y Programador Web con 15 años de experiencia"
-  description="Contrata a midudev para crear tu aplicación web o móvil. Desarrollador Web y Creador de Contenido. Especializado en crear aplicaciones únicas."
+  title="Portafolio de Alexa Hernandez - Licenciada en Artes Visuales para la Expresión Plástica"
+  description="Conoce a Alexa Hernandez. Artista Plástica. Actualmente cursando la carrera de Licenciatura en Artes Visuales para la Expresión Plástica."
 >
   <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
+    <SectionContainer id="home" class="py-16 md:py-36">
       <Hero>
       </slot>
     </Hero>
     </SectionContainer>
     <div class="space-y-24">
-    <SectionContainer id="experiencia">
+    <SectionContainer id="estudios">
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
         <Briefcase class="size-8" />
-        Experiencia laboral
+        Estudios
       </h2>
       <Experience />
     </SectionContainer>
@@ -36,7 +36,7 @@ import Hero from "@/components/Hero.astro"
       <h2
         class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
       >
-        <CodeIcon class="size-7" />
+        <CodeIcon class="size-8" />
         Proyectos
       </h2>
       <Projects />
