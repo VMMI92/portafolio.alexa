@@ -1,4 +1,4 @@
-# 👨🏻‍💻 Portafolio de Alexa Hernandez Cruz
+# 👩‍🎨 Portafolio de Alexa Hernandez Cruz
 
 <div align="center">
 <a href="https://porfolio.dev/">
