@@ -1,19 +1,26 @@
 ---
 const personalImageAlt = "Alexa Hernandez"
+const logoImageAlt = "Logo Alexa Hernandez"
 import Badge from "@/components/Badge.astro"
 import BeHanceIcon from "@/components/icons/Behance.astro"
+import IGIcon from "@/components/icons/Instagram.astro"
 import MailIcon from "@/components/icons/Mail.astro"
 import SocialPill from "@/components/SocialPill.astro"
 import LocationIcon from "@/components/icons/Location.astro"
 ---
 
-<div class="max-w-xl">
+<div class="relative max-w-xl">
   <div class="flex gap-4 mb-4">
     <img
-      class="rounded-full shadow-lg size-16"
-      src="/alexahc.webp"
-      alt={personalImageAlt}
-    />
+    class="rounded-full size-16"
+    src="/logo.webp"
+    alt={logoImageAlt}
+  />
+  <img
+  class="-ml-[25px] rounded-full shadow-lg size-16"
+  src="/alexahc.webp"
+  alt={personalImageAlt}
+/>
     <a
       href="https://www.behance.net/alexahernnd2"
       target="_blank"
@@ -45,6 +52,10 @@ import LocationIcon from "@/components/icons/Location.astro"
     <SocialPill href="https://www.behance.net/alexahernnd2">
       <BeHanceIcon class="size-4" />
       BeHance
+    </SocialPill>
+    <SocialPill href="https://www.instagram.com/alexahc1603/">
+      <IGIcon class="size-4" />
+      Instagram
     </SocialPill>
   </nav>
 </div>
