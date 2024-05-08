@@ -5,47 +5,51 @@
  import BriefcaseIcon from "@/components/icons/Briefcase.astro"
 ---
 
-<article class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row">
-  <div
-    class="[&>p]:mb-4 [&>p>strong]:text-[#CA2E55] dark:[&>p>strong]:text-[#60AB9A] text-pretty order-2 md:order-1"
-  >
-    <div class=" text-pretty grid grid-cols-2 text-center gap-4 [&>div>strong]:text-[#CA2E55] dark:[&>div>strong]:text-[#60AB9A]">
-      <div class="m-1 text-xl text-[#60AB9A] dark:text-[#F4C1C0] font-bold">CONOCIMIENTOS</div>
-      <div class="m-1 text-xl text-[#60AB9A] dark:text-[#F4C1C0] font-bold">HABILIDADES</div>
-      <div><strong>Historia del Arte</strong></div>
-      <div><strong>Creatividad</strong></div>
-      <div><strong>Corrientes Artísticas</strong></div>
-      <div><strong>Facilidad de Palabra</strong></div>
-      <div><strong>Medios Alternativos para Murales</strong></div>
-      <div><strong>Resolución de Problemas</strong></div>
-      <div><strong>Técnicas de Pintura Aceite y Agua</strong></div>
-      <div><strong>Organización y Planificación</strong></div>
-    <br></div>
-    <div class="[&>p]:mb-4 [&>div]:mb-4 [&>p>strong]:text-[#CA2E55] dark:[&>p>strong]:text-[#60AB9A] text-pretty order-2 md:order-1 [&>div>strong]:text-[#60AB9A] dark:[&>div>strong]:text-[#F4C1C0]">
-      <div class="flex justify-center gap-4 mt-4 text-xl">
-        <BriefcaseIcon/>
-        <strong>EXPERIENCIAS</strong>
+<article class=
+"flex flex-col items-center justify-center gap-8 md:flex-row text-gray-700 dark:text-gray-300">
+  <div class="order-2 md:order-1 [&_p]:mb-4 
+      [&_h1]:mb-4 [&_h1]:py-4 [&_h1]:text-xl
+    [&>div>strong]:text-keppel dark:[&>div>strong]:text-tea-rose
+    [&_h1>strong]:text-keppel dark:[&_h1>strong]:text-tea-rose
+    [&_p>strong]:text-rose-red dark:[&_p>strong]:text-keppel"
+    >
+    <div class="py-6 gap-4 grid grid-cols-2 text-center text-pretty">
+      <h1><strong>CONOCIMIENTOS</strong></h1>
+      <h1><strong>HABILIDADES</strong></h1>
+      <p><strong>Historia del Arte</strong></p>
+      <p><strong>Creatividad</strong></p>
+      <p><strong>Corrientes Artísticas</strong></p>
+      <p><strong>Facilidad de Palabra</strong></p>
+      <p><strong>Medios Alternativos para Murales</strong></p>
+      <p><strong>Resolución de Problemas</strong></p>
+      <p><strong>Técnicas de Pintura Aceite y Agua</strong></p>
+      <p><strong>Organización y Planificación</strong></p>
     </div>
+    <div class="grid grid-cols-1 gap-5 pt-10 order-2 md:order-1 text-pretty">
+    <h1 class="flex flex-row justify-center space-x-8">
+      <BriefcaseIcon/>
+      <strong>EXPERIENCIAS</strong>
+    </h1>
     <p>
       Me gusta mucho el cine y el teatro, me tocó <strong>dirigir</strong> y <strong>producir</strong> algunas obras de 
       <strong>teatro de sombras</strong> en la preparatoria 6 y he participado haciendo <strong>grabaciones de
       comerciales</strong> con la casa productora <strong>NAHUYACA FILMS</strong> en Guadalajara cuando radicaba ahí.
       También en la escuela me tocó hacer <strong>guiones</strong> y <strong>storyboards</strong>, mi parte favorita.
     </p>
-    <div class="flex justify-center gap-4 mt-4 text-xl">
+    <h1 class="flex flex-row justify-center space-x-8">
       <BulbIcon/>
       <strong>PROCESO CREATIVO</strong>
-    </div>
+    </h1>
     <p>
       Colores fríos o <strong>piezas monocromáticas</strong> cuando hay <strong>estabilidad mental</strong> o melancolía,
       colores vibrantes ante la <strong>resolución</strong> de una crisis de ansiedad reproducir sonidos 
       tibetanos <strong>meditación</strong> los espirales como signo de lucha / inseguridad o inestabilidad 
       distorsión del todo o nada, <strong>maximizando</strong>, sin medias tintas.
     </p>
-    <div class="flex justify-center gap-4 mt-4 text-xl">
+    <h1 class="flex flex-row justify-center space-x-8">
       <BrushIcon/>
       <strong>MI PRÁCTICA ARTÍSTICA</strong>
-    </div>
+    </h1>
     <p>
       Se <strong>desarrolla</strong> sobre la <strong>experiencia personal</strong> cotidiana con <strong>TDAH, TOC, TAG</strong> y
       la búsqueda de identidad, utilizo elementos de autoreferencia en mis procesos
@@ -56,7 +60,7 @@
   </div>
   </div>
 
-  <img width="200" height="200" src="/me.webp" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-[#60AB9A] ring-1 ring-black/70 dark:ring-[#CA2E55]" style="object-position: 50% 50%">
+  <img width="200" height="200" src="/me.webp" alt={personalImageAlt} class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-keppel ring-1 ring-black/70 dark:ring-rose-red" style="object-position: 50% 50%">
 
 </article>
 
