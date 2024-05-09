@@ -9,26 +9,29 @@
 "flex flex-col items-center justify-center gap-8 md:flex-row text-gray-700 dark:text-gray-300">
   <div class="order-2 md:order-1 [&_p]:mb-4 
       [&_h1]:mb-4 [&_h1]:py-4 [&_h1]:text-xl
-    [&>div>strong]:text-keppel dark:[&>div>strong]:text-tea-rose
+    [&_div>strong]:text-keppel dark:[&_div>strong]:text-tea-rose
     [&_h1>strong]:text-keppel dark:[&_h1>strong]:text-tea-rose
     [&_p>strong]:text-rose-red dark:[&_p>strong]:text-keppel"
     >
     <div class="py-6 gap-4 grid grid-cols-2 text-center text-pretty">
       <h1><strong>CONOCIMIENTOS</strong></h1>
       <h1><strong>HABILIDADES</strong></h1>
-      <p><strong>Historia del Arte</strong></p>
+      <p><strong>Murales</strong></p>
       <p><strong>Creatividad</strong></p>
+      <p><strong>Historia del Arte</strong></p>
+      <p><strong>Desenvolvimiento</strong></p>
       <p><strong>Corrientes Artísticas</strong></p>
       <p><strong>Facilidad de Palabra</strong></p>
-      <p><strong>Medios Alternativos para Murales</strong></p>
+      <p><strong>Medios Alternativos</strong></p>
       <p><strong>Resolución de Problemas</strong></p>
       <p><strong>Técnicas de Pintura Aceite y Agua</strong></p>
-      <p><strong>Organización y Planificación</strong></p>
+      <p><strong>Organización y Planificación de Proyectos</strong></p>
     </div>
-    <div class="grid grid-cols-1 gap-5 pt-10 order-2 md:order-1 text-pretty">
-    <h1 class="flex flex-row justify-center space-x-8">
-      <BriefcaseIcon/>
-      <strong>EXPERIENCIAS</strong>
+    <div class="grid grid-cols-1 gap-5 pt-10 order-2 md:order-1 text-pretty 
+      [&>h1]:grid [&>h1]:grid-cols-[_1fr,_1.5fr]">
+    <h1>
+      <span class="place-self-center"><BriefcaseIcon/></span>
+      <div><strong>EXPERIENCIAS</strong></div>
     </h1>
     <p>
       Me gusta mucho el cine y el teatro, me tocó <strong>dirigir</strong> y <strong>producir</strong> algunas obras de 
@@ -36,9 +39,9 @@
       comerciales</strong> con la casa productora <strong>NAHUYACA FILMS</strong> en Guadalajara cuando radicaba ahí.
       También en la escuela me tocó hacer <strong>guiones</strong> y <strong>storyboards</strong>, mi parte favorita.
     </p>
-    <h1 class="flex flex-row justify-center space-x-8">
-      <BulbIcon/>
-      <strong>PROCESO CREATIVO</strong>
+    <h1>
+      <span class="place-self-center"><BulbIcon/></span>
+      <div><strong>PROCESO CREATIVO</strong></div>
     </h1>
     <p>
       Colores fríos o <strong>piezas monocromáticas</strong> cuando hay <strong>estabilidad mental</strong> o melancolía,
@@ -46,9 +49,9 @@
       tibetanos <strong>meditación</strong> los espirales como signo de lucha / inseguridad o inestabilidad 
       distorsión del todo o nada, <strong>maximizando</strong>, sin medias tintas.
     </p>
-    <h1 class="flex flex-row justify-center space-x-8">
-      <BrushIcon/>
-      <strong>MI PRÁCTICA ARTÍSTICA</strong>
+    <h1>
+      <span class="place-self-center"><BrushIcon/></span>
+      <div><strong>PRÁCTICA ARTÍSTICA</strong></div>
     </h1>
     <p>
       Se <strong>desarrolla</strong> sobre la <strong>experiencia personal</strong> cotidiana con <strong>TDAH, TOC, TAG</strong> y
