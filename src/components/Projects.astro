@@ -3,7 +3,8 @@ import AguadaIcon from "./icons/Aguada.astro"
 import PencilIcon from "./icons/Pencil.astro"
 import RollerIcon from "./icons/Roller.astro"
 import CincelIcon from "./icons/Cincel.astro"
-
+import GrabadoIcon from "./icons/Cincel.astro"
+import TexturizadoIcon from "./icons/Cincel.astro"
 
 const TAGS = {
   AGUADA: {
@@ -26,28 +27,52 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: CincelIcon,
   },
+  GRABADO: {
+    name: "Grabado",
+    class: "bg-[#003159] text-white",
+    icon: GrabadoIcon,
+  },
+  TEXTURIZADO: {
+    name: "Texturizado",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
 }
 const PROJECTS = [
   {
     title: "Autorregulacion",
     description:
-      "Aliqua est fugiat sint veniam eu proident enim aliquip laborum aliquip reprehenderit ut incididunt. Cupidatat sunt veniam ex fugiat ex consectetur amet.",
+      "Carton entelado 18x25cm 2022",
     image: "/projects/h-1.webp",
     tags: [TAGS.TONAL],
   },
   {
     title: "Extasis",
     description:
-      "Dolore in aliqua veniam reprehenderit cupidatat culpa eiusmod eiusmod laborum enim.Ex laboris occaecat dolore exercitation excepteur irure tempor eu Lorem quis nulla adipisicing pariatur.",
+      "Carton entelado 18x25cm 2024",
     image: "/projects/v-1.webp",
     tags: [TAGS.TONAL],
   },
   {
-    title: "Extasis",
+    title: "Rostros en crisis",
     description:
-      "Dolore in aliqua veniam reprehenderit cupidatat culpa eiusmod eiusmod laborum enim.Ex laboris occaecat dolore exercitation excepteur irure tempor eu Lorem quis nulla adipisicing pariatur.",
-    image: "/projects/v-1.webp",
-    tags: [TAGS.TONAL],
+      "Escultura Varios tamaños 2023",
+    image: "/projects/v-3.webp",
+    tags: [TAGS.RELIEVE],
+  },
+  {
+    title: "Babilonia",
+    description:
+      "Papel algodon 50x50cm 2023",
+    image: "/projects/v-2.webp",
+    tags: [TAGS.GRABADO],
+  },
+  {
+    title: "Piscis",
+    description:
+      "Canvas 120x80cm 2023",
+    image: "/projects/v-5.webp",
+    tags: [TAGS.TEXTURIZADO],
   },
 ]
 ---
