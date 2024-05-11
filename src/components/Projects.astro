@@ -5,11 +5,13 @@ import CalcografiaIcon from "./icons/Calcografia.astro"
 import RelieveIcon from "./icons/Relieve.astro"
 import GrabadoIcon from "./icons/Grabado.astro"
 import TexturizadoIcon from "./icons/Textura.astro"
+import CarouselGalery from "./Carousel.astro"
 
 const TAGS = {
+  /* Pildoras de Medio */
   AGUADA: {
     name: "Aguada",
-    class: "bg-black text-white",
+    class: "bg-[#003159] text-white",
     icon: AguadaIcon,
   },
   TONAL: {
@@ -34,6 +36,87 @@ const TAGS = {
   },
   TEXTURIZADO: {
     name: "Texturizado",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  ENCAUSTICA: {
+    name: "Encaustica",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  FROTTAGE: {
+    name: "Frottage",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  HUMEDO: {
+    name: "Humedo/humedo",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  SECO: {
+    name: "Humedo/seco",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  PINCELS: {
+    name: "Pincel seco",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  PUNTILLISMO: {
+    name: "Puntillismo",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  TRAZOFINO: {
+    name: "Trazo fino",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  /* Pildoras de Medio */
+  ACRILICA: {
+    name: "Acrilica",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  ESTAMPADO: {
+    name: "Estampado",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  CERAMICA: {
+    name: "Ceramica",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  MIXTA: {
+    name: "Mixta",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  GRAFITO: {
+    name: "Grafito",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  OLEOPASTEL: {
+    name: "Oleo pastel",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  BOLIGRAFO: {
+    name: "Boligrafo",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  ACUARELA: {
+    name: "Acuarela",
+    class: "bg-[#003159] text-white",
+    icon: TexturizadoIcon,
+  },
+  LAPIZCERA : {
+    name: "Lapiz Cera",
     class: "bg-[#003159] text-white",
     icon: TexturizadoIcon,
   },
@@ -77,13 +160,43 @@ const PROJECTS = [
 ]
 ---
 
-<div class="flex flex-col gap-y-16">
+
+
+<div class="grid gap-4">
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg" alt="">
+  </div>
+  <div class="grid grid-cols-5 gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+      </div>
+  </div>
+</div>
+
+
+
+<div class="grid md:grid-cols-5 md:grid-rows-2 grid-cols-1 gap-4">
+
+  <!-- Tendría que quitar el mapeo para poder cambiar la ubicación de cada proyecto en específico en el grid, 
+    hacer cada proyecto a mano y buscar la manera de generar los proyectos sobre un carousel  -->
   {
     PROJECTS.map(({ image, title, description, tags }) => (
-  <article class="flex flex-col space-x-0 space-y-1 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/3">
-    <div class="relative flex flex-col items-center max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-      <img alt="Foto de proyecto" class="rounded-t-lg" src={image}/>
+  <div class="flex flex-col content-center space-x-0 space-y-1 md:flex-col md:space-x-8 md:space-y-0">
+  <div class="w-full">
+    <div class="relative flex flex-col items-center max-w-xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <img alt=`Foto de proyecto ${title}` class="rounded-t-lg" src={image}/>
     </div>
     <div class="p-5">
       <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
@@ -107,9 +220,13 @@ const PROJECTS = [
   </div>
 
       <footer class="flex items-end justify-start mt-4 gap-x-4">
+        
       </footer>
   </div>
-</article>
+</div>
     ))
   }
+  <div>
+    <CarouselGalery/>
+  </div>
 </div>
