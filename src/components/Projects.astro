@@ -1,10 +1,18 @@
 ---
-import AguadaIcon from "./icons/Aguada.astro"
-import TonalIcon from "./icons/Tonal.astro"
-import CalcografiaIcon from "./icons/Calcografia.astro"
-import RelieveIcon from "./icons/Relieve.astro"
-import GrabadoIcon from "./icons/Grabado.astro"
-import TexturizadoIcon from "./icons/Textura.astro"
+import AguadaIcon from "./icons/tecnicas/Aguada.astro"
+import TonalIcon from "./icons/tecnicas/Tonal.astro"
+import CalcografiaIcon from "./icons/tecnicas/Calcografia.astro"
+import RelieveIcon from "./icons/tecnicas/Relieve.astro"
+import GrabadoIcon from "./icons/tecnicas/Grabado.astro"
+import TexturizadoIcon from "./icons/tecnicas/Textura.astro"
+import AcrilicaIcon from "./icons/medios/Acrilica.astro"
+import MixtaIcon from "./icons/medios/Mixta.astro"
+import EstampadoIcon from "./icons/medios/Estampado.astro"
+import CeramicaIcon from "./icons/medios/Ceramica.astro"
+import OleoIcon from "./icons/medios/Oleo.astro"
+import BoligrafoIcon from "./icons/medios/Boligrafo.astro"
+import AcuarelaIcon from "./icons/medios/Acuarela.astro"
+import CeraIcon from "./icons/medios/Cera.astro"
 import CarouselGalery from "./Carousel.astro"
 
 const TAGS = {
@@ -78,47 +86,47 @@ const TAGS = {
   ACRILICA: {
     name: "Acrilica",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: AcrilicaIcon,
   },
   ESTAMPADO: {
     name: "Estampado",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: EstampadoIcon,
   },
   CERAMICA: {
     name: "Ceramica",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: CeramicaIcon,
   },
   MIXTA: {
     name: "Mixta",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: MixtaIcon,
   },
   GRAFITO: {
     name: "Grafito",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: TonalIcon,
   },
   OLEOPASTEL: {
     name: "Oleo pastel",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: OleoIcon,
   },
   BOLIGRAFO: {
     name: "Boligrafo",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: BoligrafoIcon,
   },
   ACUARELA: {
     name: "Acuarela",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: AcuarelaIcon,
   },
   LAPIZCERA : {
     name: "Lapiz Cera",
     class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
+    icon: CeraIcon,
   },
 }
 const PROJECTS = [
@@ -134,7 +142,7 @@ const PROJECTS = [
     description:
       "Carton entelado 18x25cm 2024",
     image: "/projects/v-1.webp",
-    tags: [TAGS.TONAL],
+    tags: [TAGS.TONAL, TAGS.ACRILICA],
   },
   {
     title: "Rostros en crisis",
@@ -158,131 +166,168 @@ const PROJECTS = [
     tags: [TAGS.TEXTURIZADO],
   },
 ]
+
+const cards_style = "flex flex-col max-w-2xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
+const title_style = "text-2xl font-bold text-gray-800 dark:text-gray-100";
+const pills_style = "flex flex-wrap mt-1 space-x-4";
+const ul_style = "flex flex-row mb-1 gap-x-2";
+const li_style = "content-around space-y-3 mt-2";
+const description_style = "mt-2 text-wrap text-gray-700 dark:text-gray-400";
+const span_style = "flex gap-x-2 rounded-full text-xs py-1 px-2";
+
 ---
 
-
-
 <div class="grid md:grid-cols-5 md:grid-rows-3 grid-cols-1 gap-4">
-  <div class="relative w-full md:row-start-2 md:col-span-5 justify-center ">
-    <div class="flex flex-col max-w-3xl place-content-center bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="ml-6 grid md:row-start-2 md:col-span-5 content-center">
+    <div class="flex flex-col max-w-3xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <img alt= "Foto de proyecto Autorregulacion" class="rounded-t-lg" src="/projects/h-1.webp"/>
     </div>
     <div class="p-5">
-      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      <h3 class=`${title_style}`>
         Autorregulacion
       </h3>
-      <div class="flex flex-wrap mt-1">
-        <ul class="flex flex-row mb-1 gap-x-2">
-          <li>
+      <div class=`${pills_style}`>
+        <ul class=`${ul_style}`>
+          <li class=`${li_style}`>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${TAGS.TONAL.class} py-1 px-2 `}
+              class={`${span_style} ${TAGS.TONAL.class} self-start`}
             >
               <TAGS.TONAL.icon class="size-4" />
               {TAGS.TONAL.name}
             </span>
+            <span
+            class={`${span_style} ${TAGS.ACRILICA.class} self-end`}
+          >
+            <TAGS.ACRILICA.icon class="size-4" />
+            {TAGS.ACRILICA.name}
+          </span>
           </li>
         </ul>
-        <div class="mt-2 text-wrap text-gray-700 dark:text-gray-400">Carton entelado 18x25cm 2022
+        <div class=`${description_style}`><p>Carton entelado</p><p>18x25cm</p><p>2022</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="md:col-start-4 md:row-start-3 md:col-span-2">
-    <div class="flex flex-col max-w-2xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="-ml-28 mr-28 md:col-start-4 md:row-start-3 md:col-span-2 self-start">
+    <div class=`${cards_style}`>
       <img alt= "Foto de proyecto Rostros en crisis" class="rounded-t-lg" src="/projects/v-3.webp"/>
     </div>
     <div class="p-5">
-      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      <h3 class=`${title_style}`>
         Rostros en crisis
       </h3>
-      <div class="flex flex-wrap mt-1">
-        <ul class="flex flex-row mb-1 gap-x-2">
-          <li>
+      <div class=`${pills_style}`>
+        <ul class=`${ul_style}`>
+          <li class=`${li_style}`>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${TAGS.RELIEVE.class} py-1 px-2 `}
+              class={`${span_style} ${TAGS.RELIEVE.class} self-start`}
             >
               <TAGS.RELIEVE.icon class="size-4" />
               {TAGS.RELIEVE.name}
             </span>
+            <span
+            class={`${span_style} ${TAGS.CERAMICA.class} self-end`}
+          >
+            <TAGS.CERAMICA.icon class="size-4" />
+            {TAGS.CERAMICA.name}
+          </span>
           </li>
         </ul>
-        <div class="mt-2 text-wrap text-gray-700 dark:text-gray-400">Escultura Varios tamaños 2023
+        <div class=`${description_style}`><p>Escultura</p><p>Varios tamaños</p><p>2023</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="md:col-start-4 md:col-span-2">
-    <div class="flex flex-col max-w-2xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="ml-6 md:row-start-3 md:col-span-2 self-start">
+    <div class="`${cards_style}`">
       <img alt= "Foto de proyecto Babilonia" class="rounded-t-lg" src="/projects/v-2.webp"/>
     </div>
     <div class="p-5">
-      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      <h3 class=`${title_style}`>
         Babilonia
       </h3>
-      <div class="flex flex-wrap mt-1">
-        <ul class="flex flex-row mb-1 gap-x-2">
-          <li>
+      <div class=`${pills_style}`>
+        <ul class=`${ul_style}`>
+          <li class=`${li_style}`>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${TAGS.GRABADO.class} py-1 px-2 `}
+              class={`${span_style} ${TAGS.GRABADO.class} self-start`}
             >
               <TAGS.GRABADO.icon class="size-4" />
               {TAGS.GRABADO.name}
             </span>
+            <span
+            class={`${span_style} ${TAGS.ESTAMPADO.class} self-end`}
+          >
+            <TAGS.ESTAMPADO.icon class="size-4" />
+            {TAGS.ESTAMPADO.name}
+          </span>
           </li>
         </ul>
-        <div class="mt-2 text-wrap text-gray-700 dark:text-gray-400">Papel algodon 50x50cm 2023
+        <div class=`${description_style}`><p>Papel algodon</p><p>50x50cm</p><p>2023</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="md:col-start-1 md:row-start-1 md:col-span-2">
-    <div class="flex flex-col max-w-2xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="ml-6 md:col-start-1 md:row-start-1 md:col-span-2 self-end">
+    <div class=`${cards_style}`>
       <img alt= "Foto de proyecto Extasis" class="rounded-t-lg" src="/projects/v-1.webp"/>
     </div>
     <div class="p-5">
-      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      <h3 class=`${title_style}`>
         Extasis
       </h3>
-      <div class="flex flex-wrap mt-1">
-        <ul class="flex flex-row mb-1 gap-x-2">
-          <li>
+      <div class=`${pills_style}`>
+        <ul class=`${ul_style}`>
+          <li class=`${li_style}`>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${TAGS.TONAL.class} py-1 px-2 `}
+              class={`${span_style} ${TAGS.TONAL.class} self-start`}
             >
               <TAGS.TONAL.icon class="size-4" />
               {TAGS.TONAL.name}
             </span>
+            <span
+              class={`${span_style} ${TAGS.ACRILICA.class} self-end`}
+            >
+              <TAGS.ACRILICA.icon class="size-4" />
+              {TAGS.ACRILICA.name}
+            </span>
           </li>
         </ul>
-        <div class="mt-2 text-wrap text-gray-700 dark:text-gray-400">Carton entelado 18x25cm 2024
+        <div class=`${description_style}`><p>Carton entelado</p><p>18x25cm</p><p>2024</p>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="md:row-start-3 md:col-span-2">
-    <div class="flex flex-col max-w-2xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+  <div class="-ml-28 mr-28  md:col-start-4 md:col-span-2 self-end ">
+    <div class=`${cards_style}`>
       <img alt= "Foto de proyecto Piscis" class="rounded-t-lg" src="/projects/v-5.webp"/>
     </div>
     <div class="p-5">
-      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+      <h3 class=`${title_style}`>
         Piscis
       </h3>
-      <div class="flex flex-wrap mt-1">
-        <ul class="flex flex-row mb-1 gap-x-2">
-          <li>
+      <div class=`${pills_style}`>
+        <ul class=`${ul_style}`>
+          <li class=`${li_style}`>
             <span
-              class={`flex gap-x-2 rounded-full text-xs ${TAGS.TEXTURIZADO.class} py-1 px-2 `}
+              class={`${span_style} ${TAGS.TEXTURIZADO.class} self-start`}
             >
               <TAGS.TEXTURIZADO.icon class="size-4" />
               {TAGS.TEXTURIZADO.name}
             </span>
+            <span
+              class={`${span_style} ${TAGS.MIXTA.class} self-end`}
+            >
+              <TAGS.MIXTA.icon class="size-4" />
+              {TAGS.MIXTA.name}
+            </span>
           </li>
         </ul>
-        <div class="mt-2 text-wrap text-gray-700 dark:text-gray-400">Canvas 120x80cm 2023
+        <div class=`${description_style}`><p>Canvas</p><p>120x80cm</p><p>2023</p>
         </div>
       </div>
     </div>
