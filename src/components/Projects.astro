@@ -1,171 +1,6 @@
 ---
-import AguadaIcon from "./icons/tecnicas/Aguada.astro"
-import TonalIcon from "./icons/tecnicas/Tonal.astro"
-import CalcografiaIcon from "./icons/tecnicas/Calcografia.astro"
-import RelieveIcon from "./icons/tecnicas/Relieve.astro"
-import GrabadoIcon from "./icons/tecnicas/Grabado.astro"
-import TexturizadoIcon from "./icons/tecnicas/Textura.astro"
-import AcrilicaIcon from "./icons/medios/Acrilica.astro"
-import MixtaIcon from "./icons/medios/Mixta.astro"
-import EstampadoIcon from "./icons/medios/Estampado.astro"
-import CeramicaIcon from "./icons/medios/Ceramica.astro"
-import OleoIcon from "./icons/medios/Oleo.astro"
-import BoligrafoIcon from "./icons/medios/Boligrafo.astro"
-import AcuarelaIcon from "./icons/medios/Acuarela.astro"
-import CeraIcon from "./icons/medios/Cera.astro"
 import CarouselGalery from "./Carousel.astro"
-
-const TAGS = {
-  /* Pildoras de Medio */
-  AGUADA: {
-    name: "Aguada",
-    class: "bg-[#003159] text-white",
-    icon: AguadaIcon,
-  },
-  TONAL: {
-    name: "Tonal",
-    class: "bg-[#003159] text-white",
-    icon: TonalIcon,
-  },
-  CALCOGRAFIA: {
-    name: "Calcografia",
-    class: "bg-[#003159] text-white",
-    icon: CalcografiaIcon,
-  },
-  RELIEVE: {
-    name: "Relieve",
-    class: "bg-[#003159] text-white",
-    icon: RelieveIcon,
-  },
-  GRABADO: {
-    name: "Grabado",
-    class: "bg-[#003159] text-white",
-    icon: GrabadoIcon,
-  },
-  TEXTURIZADO: {
-    name: "Texturizado",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  ENCAUSTICA: {
-    name: "Encaustica",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  FROTTAGE: {
-    name: "Frottage",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  HUMEDO: {
-    name: "Humedo/humedo",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  SECO: {
-    name: "Humedo/seco",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  PINCELS: {
-    name: "Pincel seco",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  PUNTILLISMO: {
-    name: "Puntillismo",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  TRAZOFINO: {
-    name: "Trazo fino",
-    class: "bg-[#003159] text-white",
-    icon: TexturizadoIcon,
-  },
-  /* Pildoras de Medio */
-  ACRILICA: {
-    name: "Acrilica",
-    class: "bg-[#003159] text-white",
-    icon: AcrilicaIcon,
-  },
-  ESTAMPADO: {
-    name: "Estampado",
-    class: "bg-[#003159] text-white",
-    icon: EstampadoIcon,
-  },
-  CERAMICA: {
-    name: "Ceramica",
-    class: "bg-[#003159] text-white",
-    icon: CeramicaIcon,
-  },
-  MIXTA: {
-    name: "Mixta",
-    class: "bg-[#003159] text-white",
-    icon: MixtaIcon,
-  },
-  GRAFITO: {
-    name: "Grafito",
-    class: "bg-[#003159] text-white",
-    icon: TonalIcon,
-  },
-  OLEOPASTEL: {
-    name: "Oleo pastel",
-    class: "bg-[#003159] text-white",
-    icon: OleoIcon,
-  },
-  BOLIGRAFO: {
-    name: "Boligrafo",
-    class: "bg-[#003159] text-white",
-    icon: BoligrafoIcon,
-  },
-  ACUARELA: {
-    name: "Acuarela",
-    class: "bg-[#003159] text-white",
-    icon: AcuarelaIcon,
-  },
-  LAPIZCERA : {
-    name: "Lapiz Cera",
-    class: "bg-[#003159] text-white",
-    icon: CeraIcon,
-  },
-}
-const PROJECTS = [
-  {
-    title: "Autorregulacion",
-    description:
-      "Carton entelado 18x25cm 2022",
-    image: "/projects/h-1.webp",
-    tags: [TAGS.TONAL],
-  },
-  {
-    title: "Extasis",
-    description:
-      "Carton entelado 18x25cm 2024",
-    image: "/projects/v-1.webp",
-    tags: [TAGS.TONAL, TAGS.ACRILICA],
-  },
-  {
-    title: "Rostros en crisis",
-    description:
-      "Escultura Varios tamaños 2023",
-    image: "/projects/v-3.webp",
-    tags: [TAGS.RELIEVE],
-  },
-  {
-    title: "Babilonia",
-    description:
-      "Papel algodon 50x50cm 2023",
-    image: "/projects/v-2.webp",
-    tags: [TAGS.GRABADO],
-  },
-  {
-    title: "Piscis",
-    description:
-      "Canvas 120x80cm 2023",
-    image: "/projects/v-5.webp",
-    tags: [TAGS.TEXTURIZADO],
-  },
-]
+import { TAGS } from "./Tags.astro"
 
 const cards_style = "flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
 const title_style = "text-2xl font-bold text-rose-red dark:text-gray-200";
@@ -175,44 +10,18 @@ const li_style = "content-around space-y-3 mt-2";
 const description_style = "mt-2 text-wrap text-gray-700 dark:text-gray-700";
 const span_style = "flex gap-x-2 rounded-full text-xs py-1 px-2";
 const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl shadow dark:bg-keppel dark:border-green-700"
-
 ---
 
 <div class="grid md:grid-cols-5 md:grid-rows-3 grid-cols-1 gap-4">
-  <div class=`ml-6 grid md:row-start-2 md:col-span-5 content-center`>
+  <div class=`md:ml-6 grid md:row-start-2 md:col-span-5 content-center order-last`>
     <div class="flex flex-col max-w-3xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
       <CarouselGalery/> 
     </div>
-    <div class="p-5">
-      <h3 class=`${title_style}`>
-        Autorregulación
-      </h3>
-      <div class=`${pills_style}`>
-        <ul class=`${ul_style}`>
-          <li class=`${li_style}`>
-            <span
-              class={`${span_style} ${TAGS.TONAL.class} self-start`}
-            >
-              <TAGS.TONAL.icon class="size-4" />
-              {TAGS.TONAL.name}
-            </span>
-            <span
-            class={`${span_style} ${TAGS.ACRILICA.class} self-end`}
-          >
-            <TAGS.ACRILICA.icon class="size-4" />
-            {TAGS.ACRILICA.name}
-          </span>
-          </li>
-        </ul>
-        <div class=`${description_style}`><p>Cartón entelado</p><p>18x25cm</p><p>2022</p>
-        </div>
-      </div>
-    </div>
   </div>
 
-  <div class=`-ml-28 mr-28 md:col-start-4 md:row-start-3 md:col-span-2 self-start ${border_style}`>
+  <div class=`md:-ml-28 md:mr-28 md:col-start-4 md:row-start-3 md:col-span-2 self-start ${border_style}`>
     <div class=`${cards_style}`>
-      <img alt= "Foto de proyecto Rostros en crisis" class="flex h-[350px] rounded-t-lg" src="/projects/v-3.webp"/>
+      <img alt= "Foto de proyecto Rostros en crisis" class="flex h-[350px] rounded-t-lg" src="/projects/vertical/v-3.webp"/>
     </div>
     <div class="p-5">
       <h3 class=`${title_style}`>
@@ -241,9 +50,9 @@ const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl 
     </div>
   </div>
 
-  <div class=`ml-6 md:row-start-3 md:col-span-2 self-start ${border_style}`>
+  <div class=`md:ml-6 md:row-start-3 md:col-span-2 self-start ${border_style}`>
     <div class=`${cards_style}`>
-      <img alt= "Foto de proyecto Babilonia" class="flex h-[350px] rounded-t-lg" src="/projects/v-2.webp"/>
+      <img alt= "Foto de proyecto Babilonia" class="flex h-[350px] rounded-t-lg" src="/projects/vertical/v-2.webp"/>
     </div>
     <div class="p-5">
       <h3 class=`${title_style}`>
@@ -272,9 +81,9 @@ const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl 
     </div>
   </div>
 
-  <div class=`ml-6 md:col-start-1 md:row-start-1 md:col-span-2 self-end ${border_style}`>
+  <div class=`md:ml-6 md:col-start-1 md:row-start-1 md:col-span-2 self-end ${border_style}`>
     <div class=`${cards_style}`>
-      <img alt= "Foto de proyecto Extasis" class="flex h-[500px] rounded-t-lg" src="/projects/v-1.webp"/>
+      <img alt= "Foto de proyecto Extasis" class="flex h-[500px] rounded-t-lg" src="/projects/vertical/v-1.webp"/>
     </div>
     <div class="p-5">
       <h3 class=`${title_style}`>
@@ -303,9 +112,9 @@ const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl 
     </div>
   </div>
 
-  <div class=`-ml-28 mr-28  md:col-start-4 md:col-span-2 self-end ${border_style}`>
+  <div class=`md:-ml-28 md:mr-28 md:col-start-4 md:col-span-2 self-end ${border_style}`>
     <div class=`${cards_style}`>
-      <img alt= "Foto de proyecto Piscis" class="flex h-[500px] rounded-t-lg" src="/projects/v-5.webp"/>
+      <img alt= "Foto de proyecto Piscis" class="flex h-[500px] rounded-t-lg" src="/projects/vertical/v-5.webp"/>
     </div>
     <div class="p-5">
       <h3 class=`${title_style}`>
@@ -332,10 +141,5 @@ const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl 
         </div>
       </div>
     </div>
-  </div>
-</div>
-
-  <div>
-    
   </div>
 </div>

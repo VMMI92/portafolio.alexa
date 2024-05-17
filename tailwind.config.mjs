@@ -8,6 +8,14 @@ export default {
 	theme: {
 
 		extend: {
+			width:{
+				'7/10': '70%',
+        '3/10': '30%',
+			},
+			height: {
+        '7/10': '70%',
+        '[650px]': '650px',
+      },
 			colors:{
 				"tea-rose" : "#F4C1C0",
 				"rose-red" : "#CA2E55",
