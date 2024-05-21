@@ -22,6 +22,7 @@ export default {
 				"glaucous" : "#7D82B8",
 				"keppel" : "#60AB9A",
 				"mint-green" : "#BEE3DB",
+				"dark-bg-color" : "#940B92",
 			},
 		},
 	},

@@ -1,31 +1,27 @@
 ---
-import { TAGS } from "./Tags.astro"
-import { PROJECTSH,PROJECTSV } from "./ProjectsItem.astro"
+import { PROJECTS } from "./ProjectsItem.astro"
 
-const cards_style = "flex flex-col max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700";
-const title_style = "text-2xl font-bold text-rose-red dark:text-gray-200";
-const pills_style = "flex flex-wrap mt-1 space-x-4";
-const ul_style = "flex flex-row mb-1 gap-x-2";
+const title_style = "grid col-span-2 text-2xl font-bold text-rose-red dark:text-gray-200";
+const pills_style = "flex mt-1 space-x-4";
+const ul_style = "flex flex-col mb-1 gap-x-2";
 const li_style = "content-around space-y-3 mt-2";
-const description_style = "mt-2 text-wrap text-gray-700 dark:text-gray-700";
-const span_style = "flex gap-x-2 rounded-full text-xs py-1 px-2";
-const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl shadow dark:bg-keppel dark:border-green-700"
-const movement_style = "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-
+const description_style = "mt-2 justify-self-center text-wrap text-gray-700 dark:text-gray-700";
+const span_style = "flex gap-x-2 rounded-full text-xs text-nowrap py-1 px-2";
+const border_style = "bg-mint-green border border-green-200 shadow dark:bg-keppel dark:border-green-700";
 
 ---
-<div id="default-carousel" class="relative" data-carousel="slide">
+<div id="default-carousel" class="relative" data-carousel="static">
   <!-- Carousel wrapper -->
-  <div class="relative h-56 overflow-hidden rounded-lg md:h-[525px]">
+  <div class="relative h-[650px] overflow-hidden rounded-lg">
     <!-- Item 1 -->
-    {PROJECTSH.map(({ image, title, description, tags }) => (
-      <div class="hidden duration-700 ease-in-out bg-mint-green flex-nowrap" data-carousel-item>
-        <div class={`flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${movement_style}`}>
-          <img src={image} alt={title} class="w-full h-auto object-cover rounded-l-lg" />
-        
-        <div class="w-full p-4 bg-mint-green rounded-r-lg">
+    {PROJECTS.map(({ image, title, description, tags }) => (
+      <div class= "justify-center place-content-start grid grid-flow-row duration-700 ease-in-out bg-tea-rose dark:bg-dark-bg-color flex-wrap " data-carousel-item>
+        <div class={`grid grid-rows-1 place-self-center ${border_style}`}>
+          <img src={image} alt={title} class="md:max-w-full md:max-h-[500px] rounded-t-lg" />
+        </div>
+        <div class={`grid grid-cols-2 grid-flow-rows p-4 rounded-b-lg ${border_style}`}>
           <h3 class={title_style}>{title}</h3>
-          <div class={pills_style}>
+          <div class={`${pills_style}`}>
             <ul class={ul_style}>
               {tags.map((tag) => (
                 <li class={li_style}>
@@ -40,23 +36,22 @@ const movement_style = "absolute block w-full -translate-x-1/2 -translate-y-1/2 
           <div class={description_style}>
             <p>{description}</p>
           </div>
-        </div>
       </div>
-    </div>
+      </div>
     ))}
-    
+<!--PROJECTOS VERTICALES  
     {PROJECTSV.map(({ image, title, description, tags }) => (
-    <div class="hidden duration-700 ease-in-out bg-mint-green flex-nowrap" data-carousel-item>
-      <div class={`flex flex-row bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ${movement_style}`}>
-        <img src={image} alt={title} class="w-7/10 h-auto object-cover rounded-l-lg" />
-      
-      <div class="w-3/10 p-4 bg-mint-green rounded-r-lg">
+    <div class= "justify-center place-content-start grid grid-flow-col duration-700 ease-in-out bg-tea-rose dark:bg-dark-bg-color flex-wrap" data-carousel-item>
+      <div class={`grid  place-self-center ${border_style}`}>
+        <img src={image} alt={title} class="md:max-w-full md:max-h-full max-w-full max-h-full rounded-l-lg" />
+      </div>
+      <div class={`md:flex md:flex-col grid-flow-col md:py-16 md:space-y-6 content-center p-4 rounded-r-lg ${border_style}`}>
         <h3 class={title_style}>{title}</h3>
         <div class={pills_style}>
           <ul class={ul_style}>
             {tags.map((tag) => (
               <li class={li_style}>
-                <span class={`${span_style} ${tag.class} self-start`}>
+                <span class={`${span_style} ${tag.class}`}>
                   <tag.icon class="size-4" />
                   {tag.name}
                 </span>
@@ -65,13 +60,16 @@ const movement_style = "absolute block w-full -translate-x-1/2 -translate-y-1/2 
           </ul>
         </div>
         <div class={description_style}>
-          <p>{description}</p>
+            <p>{description}</p>
         </div>
       </div>
     </div>
+  ))}-->
   </div>
-  ))}
-  </div>
+  <style>
+    p {
+      white-space: pre;}
+  </style>
   <!-- Slider indicators -->
   <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
     <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>

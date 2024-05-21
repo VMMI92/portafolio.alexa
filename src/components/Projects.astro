@@ -7,19 +7,18 @@ const title_style = "text-2xl font-bold text-rose-red dark:text-gray-200";
 const pills_style = "flex flex-wrap mt-1 space-x-4";
 const ul_style = "flex flex-row mb-1 gap-x-2";
 const li_style = "content-around space-y-3 mt-2";
-const description_style = "mt-2 text-wrap text-gray-700 dark:text-gray-700";
+const description_style = "mt-2 pl-14 text-wrap text-gray-700 dark:text-gray-700";
 const span_style = "flex gap-x-2 rounded-full text-xs py-1 px-2";
 const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl shadow dark:bg-keppel dark:border-green-700"
 ---
 
 <div class="grid md:grid-cols-5 md:grid-rows-3 grid-cols-1 gap-4">
   <div class=`md:ml-6 grid md:row-start-2 md:col-span-5 content-center order-last`>
-    <div class="flex flex-col max-w-3xl bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="flex flex-col max-w-3xl">
       <CarouselGalery/> 
     </div>
   </div>
-
-  <div class=`md:-ml-28 md:mr-28 md:col-start-4 md:row-start-3 md:col-span-2 self-start ${border_style}`>
+  <div class=`md:gap-y-0 md:-ml-28 md:mr-28 md:col-start-4 md:row-start-3 md:col-span-2 self-start ${border_style}`>
     <div class=`${cards_style}`>
       <img alt= "Foto de proyecto Rostros en crisis" class="flex h-[350px] rounded-t-lg" src="/projects/vertical/v-3.webp"/>
     </div>
@@ -75,7 +74,7 @@ const border_style = "max-w-sm bg-mint-green border border-green-200 rounded-xl 
           </span>
           </li>
         </ul>
-        <div class=`${description_style}`><p>Papel algodón</p><p>50x50cm</p><p>2023</p>
+        <div class={`${description_style}`}><p>Papel algodón</p><p>50x50cm</p><p>2023</p>
         </div>
       </div>
     </div>
