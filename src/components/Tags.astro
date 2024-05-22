@@ -13,9 +13,16 @@ import OleoIcon from "./icons/medios/Oleo.astro"
 import BoligrafoIcon from "./icons/medios/Boligrafo.astro"
 import AcuarelaIcon from "./icons/medios/Acuarela.astro"
 import CeraIcon from "./icons/medios/Cera.astro"
+import FrottageIcon from "./icons/tecnicas/Frottage.astro"
+import EncausticaIcon from "./icons/tecnicas/Encaustica.astro"
+import HumedosIcon from "./icons/tecnicas/Humedos.astro"
+import PincelsIcon from "./icons/Brush.astro"
+import PuntillismoIcon from "./icons/tecnicas/Puntillismo.astro"
+import TrazofIcon from "./icons/tecnicas/Trazof.astro"
+import TempleIcon from "./icons/medios/Temple.astro"
 
 export const tag_tecnica_class = "bg-glaucous text-white"
-export const tag_medio_class = "bg-keppel text-white"
+export const tag_medio_class = "bg-keppel text-white dark:bg-rose-red"
 
 export const TAGS = {
   /* Pildoras de Tecnica */
@@ -52,37 +59,37 @@ export const TAGS = {
   ENCAUSTICA: {
     name: "Encaustica",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: EncausticaIcon,
   },
   FROTTAGE: {
     name: "Frottage",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: FrottageIcon,
   },
   HUMEDO: {
     name: "Humedo/humedo",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: HumedosIcon,
   },
   SECO: {
     name: "Humedo/seco",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: HumedosIcon,
   },
   PINCELS: {
     name: "Pincel seco",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: PincelsIcon,
   },
   PUNTILLISMO: {
     name: "Puntillismo",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: PuntillismoIcon,
   },
   TRAZOFINO: {
     name: "Trazo fino",
     class: tag_tecnica_class,
-    icon: TexturizadoIcon,
+    icon: TrazofIcon,
   },
   /* Pildoras de Medio */
   ACRILICA: {
@@ -129,6 +136,16 @@ export const TAGS = {
     name: "Lapiz Cera",
     class: tag_medio_class,
     icon: CeraIcon,
+  },
+  TEMPLE: {
+    name: "Al Temple",
+    class: tag_medio_class,
+    icon: TempleIcon,
+  },
+  GIS: {
+    name: "Gis Pastel",
+    class: tag_medio_class,
+    icon: OleoIcon,
   },
 }
 ---
